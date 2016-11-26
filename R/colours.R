@@ -29,11 +29,11 @@ NULL
 #' # colours
 #' pal <- beyonce_palette(21, number = 2, type = "continuous")
 #' image(volcano, col = pal)
-beyonce_palette <- function(number, n, type = c("discrete", "continuous")) {
+artist_palette <- function(number, n, type = c("discrete", "continuous")) {
   type <- match.arg(type)
 
-  data("beyonce_palettes")
-  pal <- beyonce_palettes[[number]]
+  data("artist_palettes")
+  pal <- artist_palettes[[number]]#maybe make name
   if (is.null(pal))
     stop("Palette not found.")
 
