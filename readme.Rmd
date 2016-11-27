@@ -6,7 +6,7 @@ output:
 
 This is a direct replication of the code from [Karthik Ram's `wesanderson` palette](https://github.com/karthik/wesanderson) and [David Miller's `beyonce` palette](https://github.com/dill/beyonce)
 
-But, I generated Colour Palettes using the wonderful and inspirational palettes from [colourlisa.com](http://www.colourlisa.com/)
+But, I generated Colour Palettes using the wonderful and inspirational palettes from [colorlisa.com](http://www.colorlisa.com/)
 
 ## Installation
 
@@ -20,6 +20,7 @@ devtools::install_github("skiptoniam/artists")
 library(artists)
 ```
 
+Here is a complete list of artworks and their colour palettes.
 ```{r, all_palettes, fig.width=12, fig.height=26}
 par(mfrow=c(26,5))
 for(i in 1:128) print(artist_palette(i))
