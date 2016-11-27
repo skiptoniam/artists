@@ -1,9 +1,13 @@
 Package: artists
-Type: Package
-Title: What the Package Does (Title Case)
-Version: 0.1.0
-Author: Who wrote it
-Maintainer: Who to complain to <yourfault@somewhere.net>
-Description: More about what it does (maybe more than one line)
-License: What license is it under?
-LazyData: TRUE
+Title: A famous artwork Palette Generator
+Description: Palettes generated from http://www.colourlisa.com
+Version: 0.1
+Authors@R: c(person("Skipton", "Woolley", role = c("aut", "cre"),
+    email = "swoolley@museum.vic.gov.au"))
+Depends:
+    R (>= 3.0)
+License: MIT + file LICENSE
+LazyData: true
+Suggests:
+    ggplot2
+URL: https://github.com/skiptoniam/artists
