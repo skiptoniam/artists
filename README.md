@@ -305,3 +305,35 @@ rasterImage(jj,0,0,1,1)
 ```
 
 ![](readme_files/figure-markdown_github/luminous_day_josef_albers-1.png)
+
+I also really like this one too. Which seems to make nice plots.
+
+``` r
+par(mfrow=c(2,1))
+artist_palette(3)
+```
+
+    ## Golden Cloud by Gretchen Albrecht
+
+``` r
+library(jpeg)
+jj <- readJPEG('./b.jpg',native=TRUE)
+plot(0:1,0:1,type="n",ann=FALSE,axes=FALSE)
+rasterImage(jj,0,0,1,1)
+```
+
+![](readme_files/figure-markdown_github/golden_cloud_gretchen_albrecht-1.png)
+
+Here is an example of using this colour palette in `ggplot`.
+
+``` r
+library(ggplot2)
+```
+
+    ## Warning: package 'ggplot2' was built under R version 3.2.5
+
+``` r
+p <- ggplot(diamonds, aes(x = price, fill = cut)) +
+  geom_histogram(position = "dodge", binwidth = 1000)+
+  scale_fill_manual(values = artist_palette(3))
+```
