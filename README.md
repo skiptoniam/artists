@@ -333,7 +333,9 @@ library(ggplot2)
     ## Warning: package 'ggplot2' was built under R version 3.2.5
 
 ``` r
-p <- ggplot(diamonds, aes(x = price, fill = cut)) +
+ggplot(diamonds, aes(x = price, fill = cut)) +
   geom_histogram(position = "dodge", binwidth = 1000)+
   scale_fill_manual(values = artist_palette(3))
 ```
+
+![](readme_files/figure-markdown_github/diamonds_w_golden_cloud-1.png)

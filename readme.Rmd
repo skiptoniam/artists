@@ -53,8 +53,8 @@ Here is an example of using this colour palette in `ggplot`.
 
 ```{r, diamonds_w_golden_cloud,fig.width=8, fig.height=6}
 library(ggplot2)
-p <- ggplot(diamonds, aes(x = price, fill = cut)) +
+ggplot(diamonds, aes(x = price, fill = cut)) +
   geom_histogram(position = "dodge", binwidth = 1000)+
   scale_fill_manual(values = artist_palette(3))
-p
+
 ```
