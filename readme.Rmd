@@ -29,8 +29,8 @@ My only slight tweek is an abilitiy to view the art work your colour palette is 
 This can be achieved by setting `see_painting = TRUE`
 
 This is one of my favorites
-```{r,fig.width=10, fig.height=6}
-par(mfrow=c(1,2))
+```{r, luminous_day_josef_albers,fig.width=10, fig.height=10}
+par(mfrow=c(2,1))
 artist_palette(1,see_painting = TRUE)
 library(jpeg)
 jj <- readJPEG('./a.jpg',native=TRUE)

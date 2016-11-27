@@ -28,12 +28,12 @@ My only slight tweek is an abilitiy to view the art work your colour palette is 
 This is one of my favorites
 
 ``` r
-par(mfrow=c(1,2))
+par(mfrow=c(2,1))
 artist_palette(1,see_painting = TRUE)
 library(jpeg)
 ```
 
-    ## Warning: package 'jpeg' was built under R version 3.3.2
+    ## Warning: package 'jpeg' was built under R version 3.2.3
 
 ``` r
 jj <- readJPEG('./a.jpg',native=TRUE)
@@ -41,4 +41,4 @@ plot(0:1,0:1,type="n",ann=FALSE,axes=FALSE)
 rasterImage(jj,0,0,1,1)
 ```
 
-![](readme_files/figure-markdown_github/unnamed-chunk-1-1.png)
+![](readme_files/figure-markdown_github/luminous_day_josef_albers-1.png)

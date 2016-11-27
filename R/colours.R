@@ -55,6 +55,7 @@ artist_palette <- function(number, n, type = c("discrete", "continuous"),see_pai
                 continuous = colorRampPalette(pal)(n),
                 discrete = pal[1:n]
   )
+
   structure(out, class = "palette", number = number,name=names(artist_palettes)[number])
 }
 
@@ -69,4 +70,5 @@ print.palette <- function(x, ...) {
 
   rect(0, 0.9, n + 1, 1.1, col = rgb(1, 1, 1, 0.8), border = NA)
   text((n + 1) / 2, 1, labels = attr(x, "name"), cex = 1, family = "serif")
+  cat(paste0(attr(x, "name"),"\n"))
 }
