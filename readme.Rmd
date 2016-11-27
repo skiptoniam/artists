@@ -1,44 +1,39 @@
+---
+output:
+  md_document:
+    variant: markdown_github
+---
+
 This is a direct replication of the code from [Karthik Ram's `wesanderson` palette](https://github.com/karthik/wesanderson) and [David Miller's `beyonce` palette](https://github.com/dill/beyonce)
 
 But, I generated Colour Palettes using the wonderful and inspirational palettes from [colourlisa.com](http://www.colourlisa.com/)
 
-Installation
-------------
+## Installation
 
-``` r
+```R
 devtools::install_github("skiptoniam/artists")
 ```
 
-Usage
------
+## Usage
 
-``` r
+```{r, palettes_dummy}
 library(artists)
 ```
 
-``` r
+```{r, all_palettes, fig.width=8, fig.height=26}
 par(mfrow=c(26,5))
 for(i in 1:128) print(artist_palette(i))
 ```
 
-![](readme_files/figure-markdown_github/all_palettes-1.png)
-
-My only slight tweek is an abilitiy to view the art work your colour palette is based on. This can be achieved by setting `see_painting = TRUE`
+My only slight tweek is an abilitiy to view the art work your colour palette is based on.
+This can be achieved by setting `see_painting = TRUE`
 
 This is one of my favorites
-
-``` r
+```{r,fig.width=10, fig.height=6}
 par(mfrow=c(1,2))
 artist_palette(1,see_painting = TRUE)
 library(jpeg)
-```
-
-    ## Warning: package 'jpeg' was built under R version 3.3.2
-
-``` r
 jj <- readJPEG('./a.jpg',native=TRUE)
 plot(0:1,0:1,type="n",ann=FALSE,axes=FALSE)
 rasterImage(jj,0,0,1,1)
 ```
-
-![](readme_files/figure-markdown_github/unnamed-chunk-1-1.png)
