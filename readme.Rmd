@@ -20,7 +20,7 @@ devtools::install_github("skiptoniam/artists")
 library(artists)
 ```
 
-```{r, all_palettes, fig.width=8, fig.height=26}
+```{r, all_palettes, fig.width=12, fig.height=26}
 par(mfrow=c(26,5))
 for(i in 1:128) print(artist_palette(i))
 ```
