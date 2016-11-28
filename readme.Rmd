@@ -39,6 +39,20 @@ plot(0:1,0:1,type="n",ann=FALSE,axes=FALSE)
 rasterImage(jj,0,0,1,1)
 ```
 
+```{r}
+library(ggplot2)
+df <- data.frame(
+  x = runif(100),
+  y = runif(100),
+  z1 = rnorm(100),
+  z2 = abs(rnorm(100))
+)
+ggplot(df, aes(x, y)) +
+  geom_point(aes(colour = z1,size=z2)) +
+  scale_colour_gradientn(colours = artist_palette(1,100,type ='continuous'))  
+
+```
+
 I also really like this one too. Which seems to make nice plots.
 ```{r, golden_cloud_gretchen_albrecht,fig.width=8, fig.height=10}
 par(mfrow=c(2,1))

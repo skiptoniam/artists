@@ -50,6 +50,26 @@ rasterImage(jj,0,0,1,1)
 
 ![](readme_files/figure-markdown_github/luminous_day_josef_albers-1.png)
 
+``` r
+library(ggplot2)
+```
+
+    ## Warning: package 'ggplot2' was built under R version 3.2.5
+
+``` r
+df <- data.frame(
+  x = runif(100),
+  y = runif(100),
+  z1 = rnorm(100),
+  z2 = abs(rnorm(100))
+)
+ggplot(df, aes(x, y)) +
+  geom_point(aes(colour = z1,size=z2)) +
+  scale_colour_gradientn(colours = artist_palette(1,100,type ='continuous'))  
+```
+
+![](readme_files/figure-markdown_github/unnamed-chunk-1-1.png)
+
 I also really like this one too. Which seems to make nice plots.
 
 ``` r
@@ -72,11 +92,6 @@ Here is an example of using this colour palette in `ggplot`.
 
 ``` r
 library(ggplot2)
-```
-
-    ## Warning: package 'ggplot2' was built under R version 3.2.5
-
-``` r
 ggplot(diamonds, aes(x = price, fill = cut)) +
   geom_histogram(position = "dodge", binwidth = 1000)+
   scale_fill_manual(values = artist_palette(3))
