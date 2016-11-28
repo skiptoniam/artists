@@ -30,7 +30,7 @@ My only slight tweek is an abilitiy to view the art work your colour palette is 
 This can be achieved by setting `see_painting = TRUE`
 
 This is one of my favorites
-```{r, luminous_day_josef_albers,fig.width=10, fig.height=10}
+```{r, luminous_day_josef_albers,fig.width=10, fig.height=10,echo=FALSE}
 par(mfrow=c(2,1))
 artist_palette(1,see_painting = TRUE)
 library(jpeg)
@@ -54,7 +54,7 @@ ggplot(df, aes(x, y)) +
 ```
 
 I also really like this one too. Which seems to make nice plots.
-```{r, golden_cloud_gretchen_albrecht,fig.width=8, fig.height=10}
+```{r, golden_cloud_gretchen_albrecht,fig.width=8, fig.height=10,echo=FALSE}
 par(mfrow=c(2,1))
 artist_palette(3)
 library(jpeg)
@@ -73,7 +73,17 @@ ggplot(diamonds, aes(x = price, fill = cut)) +
 ```
 
 Bauhaus Stairway by Oskar Schlemmer is awesome for heat maps.
-```{r,Bauhaustreppe,fig.width=8, fig.height=6}
+```{r,Bauhaustreppe1,fig.width=8, fig.height=6,echo=FALSE}
+par(mfrow=c(1,2))
+artist_palette(104)
+library(jpeg)
+jj <- readJPEG('./c.jpg',native=TRUE)
+plot(0:1,0:1,type="n",ann=FALSE,axes=FALSE)
+rasterImage(jj,0,0,1,1)
+```
+
+Here is an example using the old faithful dataset.
+```{r,Bauhaustreppe2,fig.width=8, fig.height=6}
 cols <- artist_palette(104,100,type ='continuous')
 ggplot(faithfuld, aes(waiting, eruptions)) +
      geom_raster(aes(fill = density))+
