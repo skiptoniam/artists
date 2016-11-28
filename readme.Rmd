@@ -64,7 +64,6 @@ rasterImage(jj,0,0,1,1)
 ```
 
 Here is an example of using this colour palette in `ggplot`.
-
 ```{r, diamonds_w_golden_cloud,fig.width=8, fig.height=6}
 library(ggplot2)
 ggplot(diamonds, aes(x = price, fill = cut)) +
@@ -72,3 +71,12 @@ ggplot(diamonds, aes(x = price, fill = cut)) +
   scale_fill_manual(values = artist_palette(3))
 
 ```
+
+Bauhaus Stairway by Oskar Schlemmer is awesome for heat maps.
+```{r,Bauhaustreppe,fig.width=8, fig.height=6}
+cols <- artist_palette(104,100,type ='continuous')
+ggplot(faithfuld, aes(waiting, eruptions)) +
+     geom_raster(aes(fill = density))+
+     scale_fill_gradientn(colours = cols) 
+```
+

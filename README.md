@@ -98,3 +98,14 @@ ggplot(diamonds, aes(x = price, fill = cut)) +
 ```
 
 ![](readme_files/figure-markdown_github/diamonds_w_golden_cloud-1.png)
+
+Bauhaus Stairway by Oskar Schlemmer is awesome for heat maps.
+
+``` r
+cols <- artist_palette(104,100,type ='continuous')
+ggplot(faithfuld, aes(waiting, eruptions)) +
+     geom_raster(aes(fill = density))+
+     scale_fill_gradientn(colours = cols) 
+```
+
+![](readme_files/figure-markdown_github/Bauhaustreppe-1.png)
