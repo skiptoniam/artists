@@ -21,7 +21,7 @@ library(artists)
 ```
 
 Here is a complete list of artworks and their colour palettes.
-```{r, all_palettes, fig.width=12, fig.height=26,message=FALSE,warning=FALSE,error=FALSE}
+```{r, all_palettes, fig.width=12, fig.height=26,message=FALSE,warning=FALSE,error=FALSE,results='hide'}
 par(mfrow=c(26,5))
 for(i in 1:128) print(artist_palette(i))
 ```
